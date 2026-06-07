@@ -1,0 +1,53 @@
+﻿:host {
+  display: block;
+}
+
+.about-page {
+  min-height: 100vh;
+  padding: 7rem 1.5rem 4rem;
+  color: #f8fafc;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 24%),
+    linear-gradient(180deg, #020617 0%, #0f172a 45%, #111827 100%);
+}
+
+.about-shell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.about-header {
+  margin-bottom: 2.75rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #bae6fd;
+}
+
+.eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.28rem;
+  text-transform: uppercase;
+  color: #38bdf8;
+}
+
+.about-header h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4vw, 4.4rem);
+  line-height: 1;
+}
+
+.about-copy {
+  width: min(1120px, 100%);
+  margin: 0;
+}

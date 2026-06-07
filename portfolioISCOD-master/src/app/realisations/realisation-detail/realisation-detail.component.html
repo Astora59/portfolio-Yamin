@@ -1,0 +1,135 @@
+<section
+  class="detail-page"
+  *ngIf="realisation as currentRealisation; else notFound"
+  [ngStyle]="getToneStyle(currentRealisation)"
+>
+  <div class="detail-shell">
+    <a routerLink="/real" class="back-link">Retour aux réalisations</a>
+
+    <header class="detail-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Réalisation</p>
+        <h1>{{ currentRealisation.title }}</h1>
+        <p class="summary">{{ currentRealisation.shortDescription }}</p>
+      </div>
+    </header>
+
+    <section class="detail-section">
+      <h2>Contexte</h2>
+      <div
+        class="detail-copy"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.presentation)"
+      ></div>
+
+      <article
+        *ngIf="currentRealisation.externalLink"
+        class="project-spotlight"
+        aria-label="Lien externe vers le projet"
+      >
+        <p class="project-spotlight__eyebrow">Pour aller plus loin</p>
+        <h3>
+          {{
+            currentRealisation.externalLink.spotlightTitle ||
+              "Consulter le site officiel du projet"
+          }}
+        </h3>
+        <p>
+          {{
+            currentRealisation.externalLink.spotlightDescription ||
+              "Pour plus de détails sur ce projet, vous pouvez consulter le site associé."
+          }}
+        </p>
+        <a
+          [href]="currentRealisation.externalLink.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="external-link"
+        >
+          {{ currentRealisation.externalLink.label }}
+        </a>
+      </article>
+    </section>
+
+    <section class="detail-section">
+      <h2>Objectifs, contexte, enjeux et risques</h2>
+      <div
+        class="detail-copy"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.objectives)"
+      ></div>
+    </section>
+
+    <section class="detail-section">
+      <h2>Les étapes du projet</h2>
+      <div
+        class="detail-copy"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.steps)"
+      ></div>
+    </section>
+
+    
+    <section class="detail-section">
+      <h2>Résultats</h2>
+      <div
+        class="detail-copy"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.results)"
+      ></div>
+    </section>
+
+    <section class="detail-section">
+      <h2>Les lendemains du projet</h2>
+      <div
+        class="detail-copy"
+        [innerHTML]="highlightPortfolioText(currentRealisation.article.future)"
+      ></div>
+    </section>
+
+
+
+    <section class="detail-section related-section">
+      <h2>Compétences mobilisées</h2>
+
+      <ul class="related-list">
+        <li
+          *ngFor="let skill of currentRealisation.relatedSkills"
+          class="related-link-chip related-link-chip--skill"
+        >
+          <a
+            [routerLink]="['/comp', skill.link]"
+            class="related-link related-link--skill"
+          >
+            {{ skill.label }}
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section
+      *ngIf="currentRealisation.relatedParcours?.length"
+      class="detail-section related-section"
+    >
+      <h2>Étape du parcours liée</h2>
+
+      <ul class="related-list">
+        <li
+          *ngFor="let step of currentRealisation.relatedParcours"
+          class="related-link-chip related-link-chip--skill"
+        >
+          <a
+            [routerLink]="['/parcours', step.link]"
+            class="related-link related-link--skill"
+          >
+            {{ step.label }}
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</section>
+
+<ng-template #notFound>
+  <section class="detail-page detail-page--fallback">
+    <div class="detail-shell">
+      <p class="detail-fallback">Réalisation introuvable.</p>
+    </div>
+  </section>
+</ng-template>

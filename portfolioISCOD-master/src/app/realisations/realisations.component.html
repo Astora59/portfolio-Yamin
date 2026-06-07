@@ -1,0 +1,28 @@
+﻿<section class="realisations-page">
+  <div class="realisations-shell">
+    <header class="realisations-header">
+      <a routerLink="/" class="back-link">Retour à l’accueil</a>
+      <p class="eyebrow">Réalisations</p>
+      <h1>Mes réalisations</h1>
+    </header>
+
+    <div class="realisations-grid">
+      <a
+        *ngFor="let real of realisations"
+        [routerLink]="['/real', real.slug]"
+        class="real-card"
+        [ngStyle]="getToneStyle(real.slug)"
+      >
+        <p class="real-eyebrow">Projet</p>
+        <h2>{{ real.title }}</h2>
+
+        <p
+          class="real-description"
+          [innerHTML]="emphasizePortfolioText(real.shortDescription)"
+        ></p>
+
+        <span class="real-cta">Voir la réalisation</span>
+      </a>
+    </div>
+  </div>
+</section>

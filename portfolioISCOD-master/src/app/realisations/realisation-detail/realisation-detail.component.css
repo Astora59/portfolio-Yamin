@@ -1,0 +1,318 @@
+:host {
+  display: block;
+}
+
+.detail-page {
+  min-height: 100vh;
+  padding: 7rem 1.5rem 4rem;
+  color: #f8fafc;
+  --real-accent: #60a5fa;
+  --real-accent-soft: rgba(96, 165, 250, 0.18);
+  --real-accent-glow: rgba(96, 165, 250, 0.16);
+  background:
+    radial-gradient(circle at top left, var(--real-accent-soft), transparent 28%),
+    radial-gradient(circle at bottom right, var(--real-accent-glow), transparent 26%),
+    linear-gradient(180deg, #020617 0%, #0f172a 50%, #111827 100%);
+}
+
+.detail-page--fallback {
+  display: flex;
+  align-items: center;
+}
+
+.detail-shell {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-flex;
+  margin-bottom: 1.5rem;
+  color: var(--real-accent);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #e2e8f0;
+}
+
+.detail-hero {
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.22rem;
+  text-transform: uppercase;
+  color: var(--real-accent);
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 4vw, 4.2rem);
+  line-height: 1.02;
+}
+
+.summary {
+  margin: 1rem 0 0;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+.detail-section {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-top: 1px solid var(--real-accent-soft);
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.72)),
+    linear-gradient(90deg, var(--real-accent-soft), transparent 36%);
+  box-shadow:
+    0 18px 44px rgba(2, 6, 23, 0.25),
+    inset 0 1px 0 var(--real-accent-glow);
+}
+
+.detail-section h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1.35rem;
+  color: var(--real-accent);
+}
+
+.detail-section p {
+  margin: 0;
+  line-height: 1.8;
+  color: #dbeafe;
+  white-space: pre-line;
+}
+
+.detail-copy {
+  margin: 0;
+  line-height: 1.8;
+  color: #dbeafe;
+  white-space: pre-line;
+}
+
+:host ::ng-deep .detail-copy h3 {
+  margin: 1.3rem 0 0.65rem;
+  padding-bottom: 0.35rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f8fafc;
+  border-bottom: 1px solid color-mix(in srgb, var(--real-accent) 28%, transparent);
+}
+
+:host ::ng-deep .detail-copy h3:first-child {
+  margin-top: 0;
+}
+
+:host ::ng-deep .detail-copy .real-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+:host ::ng-deep .detail-copy .real-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1rem;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.7), rgba(125, 211, 252, 0.1));
+}
+
+:host ::ng-deep .detail-copy .real-timeline-item {
+  position: relative;
+  margin-left: 2.8rem;
+  padding: 1.2rem 1.25rem 1.2rem;
+  border-radius: 1.35rem;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-top: 1px solid color-mix(in srgb, var(--real-accent) 30%, transparent);
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)),
+    linear-gradient(90deg, color-mix(in srgb, var(--real-accent) 14%, transparent), transparent 35%);
+  box-shadow: 0 22px 60px rgba(2, 6, 23, 0.28);
+}
+
+:host ::ng-deep .detail-copy .real-timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 1.05rem;
+  left: -2.55rem;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--real-accent), rgba(15, 23, 42, 0.92));
+  box-shadow: 0 0 0 6px rgba(2, 6, 23, 0.95);
+}
+
+:host ::ng-deep .detail-copy .real-timeline-item h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+:host ::ng-deep .detail-copy .real-timeline-item p {
+  margin: 0;
+}
+
+:host ::ng-deep .detail-copy .real-timeline-item ul {
+  margin: 0.65rem 0 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+
+:host ::ng-deep .detail-copy .real-timeline-item li + li {
+  margin-top: 0.3rem;
+}
+
+@media (min-width: 820px) {
+  :host ::ng-deep .detail-copy .real-timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  :host ::ng-deep .detail-copy .real-timeline-item {
+    width: calc(50% - 1.7rem);
+    margin-left: 0;
+  }
+
+  :host ::ng-deep .detail-copy .real-timeline-item:nth-child(odd) {
+    margin-right: auto;
+  }
+
+  :host ::ng-deep .detail-copy .real-timeline-item:nth-child(even) {
+    margin-left: auto;
+  }
+
+  :host ::ng-deep .detail-copy .real-timeline-item:nth-child(odd)::before {
+    left: auto;
+    right: -2.75rem;
+  }
+
+  :host ::ng-deep .detail-copy .real-timeline-item:nth-child(even)::before {
+    left: -2.75rem;
+  }
+}
+
+.project-spotlight {
+  margin-top: 1.25rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--real-accent) 30%, transparent);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--real-accent) 12%, rgba(15, 23, 42, 0.92)), rgba(15, 23, 42, 0.88)),
+    radial-gradient(circle at top right, var(--real-accent-glow), transparent 55%);
+  box-shadow:
+    0 14px 32px rgba(2, 6, 23, 0.2),
+    inset 0 1px 0 color-mix(in srgb, var(--real-accent) 16%, white 8%);
+}
+
+.project-spotlight__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--real-accent) 78%, white 22%);
+}
+
+.project-spotlight h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #f8fafc;
+}
+
+.project-spotlight p + .external-link {
+  margin-top: 0.9rem;
+}
+
+.external-link {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--real-accent) 32%, transparent);
+  background: var(--real-accent-soft);
+  color: color-mix(in srgb, var(--real-accent) 78%, white 22%);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.external-link:hover,
+.external-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--real-accent) 52%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--real-accent) 18%, transparent),
+    0 10px 24px var(--real-accent-glow);
+  color: #f8fafc;
+}
+
+.related-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.related-link-chip {
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  border: 1px solid transparent;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.related-link-chip--skill {
+  background: var(--real-accent-soft);
+  border-color: color-mix(in srgb, var(--real-accent) 28%, transparent);
+}
+
+.related-link-chip--skill:hover,
+.related-link-chip--skill:focus-within {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--real-accent) 48%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--real-accent) 18%, transparent),
+    0 10px 24px var(--real-accent-glow);
+}
+
+.related-link {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.related-link--skill {
+  color: color-mix(in srgb, var(--real-accent) 78%, white 22%);
+}
+
+.related-link--skill:hover,
+.related-link--skill:focus-visible {
+  color: #f8fafc;
+}
+
+.detail-fallback {
+  margin: 0;
+  color: #cbd5e1;
+}

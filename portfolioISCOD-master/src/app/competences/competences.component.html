@@ -1,0 +1,73 @@
+﻿<section class="skills-page">
+  <div class="skills-shell">
+    <header class="skills-header">
+      <a routerLink="/" class="back-link">Retour à l’accueil</a>
+      <p class="eyebrow">Compétences</p>
+      <h1>Mes compétences</h1>
+    </header>
+
+    <div class="skills-grid">
+      <section
+        class="skills-domain"
+        [ngStyle]="{
+          '--domain-accent': technicalSectionTone.accent,
+          '--domain-accent-soft': technicalSectionTone.soft,
+        }"
+      >
+        <div class="skills-domain-header">
+          <h2>Compétences techniques</h2>
+          <span>Niveau estimé</span>
+        </div>
+
+        <a
+          *ngFor="let skill of technicalSkills"
+          class="skill-card"
+          [routerLink]="['/comp', skill.slug]"
+          [ngStyle]="getToneStyle(skill)"
+        >
+          <div class="skill-headline">
+            <div class="skill-copy">
+              <span class="skill-icon">{{ skill.icon }}</span>
+              <div class="skill-text">
+                <span class="skill-name">{{ skill.name }}</span>
+                <p class="skill-summary" [innerHTML]="skill.summary"></p>
+              </div>
+            </div>
+            <span class="skill-level">{{ getSkillLevelLabel(skill) }}</span>
+          </div>
+        </a>
+      </section>
+
+      <section
+        class="skills-domain"
+        [ngStyle]="{
+          '--domain-accent': softSectionTone.accent,
+          '--domain-accent-soft': softSectionTone.soft,
+        }"
+      >
+        <div class="skills-domain-header">
+          <h2>Compétences humaines</h2>
+          <span>Niveau estimé</span>
+        </div>
+
+        <a
+          *ngFor="let skill of softSkills"
+          class="skill-card"
+          [routerLink]="['/comp', skill.slug]"
+          [ngStyle]="getToneStyle(skill)"
+        >
+          <div class="skill-headline">
+            <div class="skill-copy">
+              <span class="skill-icon">{{ skill.icon }}</span>
+              <div class="skill-text">
+                <span class="skill-name">{{ skill.name }}</span>
+                <p class="skill-summary" [innerHTML]="skill.summary"></p>
+              </div>
+            </div>
+            <span class="skill-level">{{ getSkillLevelLabel(skill) }}</span>
+          </div>
+        </a>
+      </section>
+    </div>
+  </div>
+</section>

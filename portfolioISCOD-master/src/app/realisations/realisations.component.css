@@ -1,0 +1,115 @@
+:host {
+  display: block;
+}
+
+.realisations-page {
+  min-height: 100vh;
+  padding: 7rem 1.5rem 4rem;
+  color: #f8fafc;
+  background:
+    radial-gradient(circle at top left, rgba(96, 165, 250, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(52, 211, 153, 0.14), transparent 24%),
+    linear-gradient(180deg, #020617 0%, #0f172a 45%, #111827 100%);
+}
+
+.realisations-shell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.realisations-header {
+  margin-bottom: 2.75rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #7dd3fc;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #bae6fd;
+}
+
+.eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.28rem;
+  text-transform: uppercase;
+  color: #818cf8;
+}
+
+.realisations-header h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4vw, 4.4rem);
+  line-height: 1;
+}
+
+.realisations-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.real-card {
+  display: block;
+  padding: 1.6rem;
+  border-radius: 1.6rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-top: 1px solid var(--real-accent-soft);
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)),
+    linear-gradient(90deg, var(--real-accent-soft), transparent 35%);
+  box-shadow: 0 22px 60px rgba(2, 6, 23, 0.28);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.real-card:hover,
+.real-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--real-accent-soft);
+  box-shadow:
+    0 24px 62px rgba(2, 6, 23, 0.3),
+    0 0 0 1px var(--real-accent-soft),
+    0 0 24px var(--real-accent-glow);
+}
+
+.real-eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.16rem;
+  text-transform: uppercase;
+  color: var(--real-accent);
+}
+
+.real-card h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.real-description {
+  margin: 1rem 0 0;
+  line-height: 1.75;
+  color: #cbd5e1;
+}
+
+.real-cta {
+  display: inline-flex;
+  margin-top: 1.2rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--real-accent);
+}
+
+@media (min-width: 880px) {
+  .realisations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,115 @@
+<section
+  class="detail-page"
+  *ngIf="skill as currentSkill"
+  [ngStyle]="getToneStyle(currentSkill)"
+>
+  <div class="detail-shell">
+    <a routerLink="/comp" class="back-link">Retour aux compétences</a>
+
+    <header class="detail-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Compétence</p>
+        <h1>{{ currentSkill.icon }} {{ currentSkill.name }}</h1>
+      </div>
+
+      <section class="level-panel">
+        <p class="level-label">Niveau estimé</p>
+        <p class="level-value">{{ getSkillLevelLabel(currentSkill) }}</p>
+      </section>
+    </header>
+
+    <section class="detail-section">
+      <h2>Ma définition</h2>
+      <div
+        class="detail-copy whitespace-pre-line"
+        [innerHTML]="highlightPortfolioText(currentSkill.article.definition, [currentSkill.slug])"
+      ></div>
+    </section>
+
+    <section class="detail-section">
+      <h2>Mes éléments de preuve</h2>
+
+      <div *ngFor="let proof of currentSkill.article.proofs" class="proof-block">
+        <h3>{{ proof.title }}</h3>
+
+        <div
+          class="detail-copy whitespace-pre-line"
+          [innerHTML]="highlightPortfolioText(proof.description, [currentSkill.slug])"
+        ></div>
+
+        <div
+          class="detail-copy detail-copy--strong whitespace-pre-line"
+          [innerHTML]="highlightPortfolioText(proof.result, [currentSkill.slug])"
+        ></div>
+
+        <a
+          *ngIf="proof.link"
+          [routerLink]="proof.link"
+          class="proof-link"
+        >
+          Voir la réalisation associée
+        </a>
+      </div>
+
+      <p
+        *ngIf="currentSkill.article.proofs.length === 0"
+        class="detail-empty"
+      >
+        Exemples à venir.
+      </p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Mon autocritique</h2>
+      <div
+        class="detail-copy whitespace-pre-line"
+        [innerHTML]="highlightPortfolioText(currentSkill.article.selfCritique, [currentSkill.slug])"
+      ></div>
+    </section>
+
+    <section class="detail-section">
+      <h2>Mon évolution dans cette compétence</h2>
+      <div
+        class="detail-copy whitespace-pre-line"
+        [innerHTML]="highlightPortfolioText(currentSkill.article.evolution, [currentSkill.slug])"
+      ></div>
+    </section>
+
+    <section class="detail-section related-section">
+      <h2>Réalisations associées</h2>
+
+      <article
+        *ngIf="currentSkill.article.relatedProjects.length"
+        class="project-spotlight"
+        aria-label="Lien vers une réalisation associée"
+      >
+        <p class="project-spotlight__eyebrow">Projet lié</p>
+        <h3>{{ currentSkill.article.relatedProjects[0].label }}</h3>
+        <p>
+          Retrouver la réalisation associée pour voir cette compétence appliquée
+          dans un contexte concret.
+        </p>
+        <a
+          [routerLink]="currentSkill.article.relatedProjects[0].link"
+          class="external-link"
+        >
+          Voir le projet
+        </a>
+      </article>
+
+      <ul class="related-list">
+        <li
+          *ngFor="let project of currentSkill.article.relatedProjects"
+          class="related-link-chip related-link-chip--project"
+        >
+          <a
+            [routerLink]="project.link"
+            class="related-link related-link--project"
+          >
+            {{ project.label }}
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</section>

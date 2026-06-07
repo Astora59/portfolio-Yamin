@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+    -webkit-tap-highlight-color: rgba(96, 165, 250, 0.16);
+  }
+
+  a {
+    color: inherit;
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+    text-decoration-skip-ink: auto;
+    text-decoration-color: color-mix(in srgb, currentColor 34%, transparent);
+    transition:
+      color 180ms ease,
+      text-decoration-color 180ms ease,
+      text-underline-offset 180ms ease,
+      opacity 180ms ease,
+      box-shadow 180ms ease,
+      filter 180ms ease;
+  }
+
+  a:hover {
+    text-decoration-color: currentColor;
+    text-underline-offset: 0.24em;
+    filter: brightness(1.03);
+  }
+
+  a.skill-inline-link {
+    color: #93c5fd;
+    font-weight: 700;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.08em;
+    text-decoration-color: rgba(147, 197, 253, 0.5);
+    text-underline-offset: 0.2em;
+  }
+
+  a.skill-inline-link:hover {
+    color: #bfdbfe;
+    text-decoration-color: currentColor;
+  }
+
+  a:active {
+    opacity: 0.88;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.22);
+  }
+
+  ::selection {
+    background: rgba(96, 165, 250, 0.28);
+    color: #f8fafc;
+  }
+}

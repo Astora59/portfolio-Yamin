@@ -1,0 +1,6 @@
+
+<img src="assets/voiture.gif" id="myGif" style="display: none;" />
+<img src="assets/voiture.gif" [ngStyle]="{ 'animation-duration': 1 / gifSpeed + 's' }" class="w-32 h-32" />
+{{gifSpeed}}
+<button (click)="accelerateGif()">Accélérer</button>
+<button (click)="decelerateGif()">Ralentir</button>

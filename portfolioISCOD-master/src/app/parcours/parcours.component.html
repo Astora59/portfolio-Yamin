@@ -1,0 +1,64 @@
+﻿<section class="timeline-page">
+  <div class="timeline-shell">
+    <header class="timeline-header">
+      <a routerLink="/" class="back-link">Retour à l’accueil</a>
+      <p class="eyebrow">Parcours</p>
+      <h1>Ma fresque chronologique</h1>
+      <p class="intro">
+        <strong>Cliquez sur une étape pour en savoir plus</strong>.
+      </p>
+
+      <div class="timeline-legend" aria-label="Filtres du parcours">
+        <button
+          *ngFor="let filter of filterOptions"
+          type="button"
+          class="legend-chip"
+          [ngClass]="[
+            filter.chipClass,
+            activeFilter === filter.key ? 'is-active' : 'is-inactive',
+          ]"
+          [attr.aria-pressed]="activeFilter === filter.key"
+          (click)="setFilter(filter.key)"
+        >
+          {{ filter.label }}
+        </button>
+      </div>
+    </header>
+
+    <div class="timeline">
+      <article
+        *ngFor="let step of filteredTimelineSteps"
+        class="timeline-item"
+        [ngStyle]="{
+          '--step-accent': step.accent,
+          '--step-accent-soft': step.accentSoft,
+          '--step-accent-glow': step.accentGlow,
+        }"
+      >
+        <div class="step-index">{{ step.order | number: "2.0" }}</div>
+
+        <a
+          class="step-card step-card-link"
+          [routerLink]="['/parcours', step.slug]"
+        >
+          <span class="step-category">{{ step.categoryLabel }}</span>
+          <p class="step-period">Étape {{ step.order }} : {{ step.period }}</p>
+          <p
+            class="step-subtitle"
+            [innerHTML]="emphasizePortfolioText(step.subtitle)"
+          ></p>
+          <h2>{{ step.title }}</h2>
+          <p
+            class="step-description"
+            [innerHTML]="emphasizePortfolioText(step.description)"
+          ></p>
+          <span class="step-cta">Voir cette étape</span>
+        </a>
+      </article>
+    </div>
+
+    <p *ngIf="filteredTimelineSteps.length === 0" class="timeline-empty">
+      Aucun élément ne correspond à ce filtre.
+    </p>
+  </div>
+</section>

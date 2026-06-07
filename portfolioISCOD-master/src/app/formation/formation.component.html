@@ -1,0 +1,101 @@
+<div class="text-center h-screen w-full flex flex-col justify-center items-center bg-[url('/assets/fondAcceuil.gif')] bg-cover">
+  <div class="p-3 text-xs md:text-base border-red-300 border-8 flex flex-col w-4/5 md:w-3/5 items-center bg-gradient-to-r from-green-400 to-blue-500 rounded opacity-95">
+    <caption class="uppercase p-10 text-lg font-extrabold">Ynov Campus Montpellier</caption>
+    <div class="space-y-3 flex flex-col w-11/12">
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('adBDD')">
+        <strong>Administration des bases de données (BDD)</strong> - 24H
+        <div *ngIf="adBDD==true">
+          Travail en classe en présentiel afin de mettre en place une base de données propre, sécurisée et évolutive, respectant un stockage réaliste.
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('devAPI')">
+        <strong>Développement d'API</strong> - 40H
+        <div *ngIf="devAPI==true">
+          Travail en classe en présentiel sur un framework Laravel avec une base de données sous Laragon afin d'implémenter une API REST, c'est-à-dire une interface de communication entre applications.
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('desktop')">
+        <strong>Développement desktop</strong> - 40H
+        <div *ngIf="desktop==true">
+          Travail en classe en présentiel pour apprendre à utiliser Visual Studio et C# afin de développer des applications desktop, avec documentation et projet d'installation.
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('devMOBILE')">
+        <strong>Développement mobile</strong> - 48H
+        <div *ngIf="devMOBILE==true">
+          Travail en classe en distanciel pour l'apprentissage de Kotlin, de React Native et de Flutter afin de développer des applications mobiles.
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('devOps')">
+        <a href="/comp/docker-devops" class="underline underline-offset-4">
+          <strong>DevOps</strong>
+        </a>
+        - 40H
+        <div *ngIf="devOps==true">
+          Travail en classe en présentiel pour apprendre à utiliser
+          <a href="/comp/docker-devops" class="underline underline-offset-4">
+            <strong>Docker</strong>
+          </a>
+          et <strong>Kubernetes</strong> afin de mettre en place un environnement de développement.
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('management')">
+        <strong>Management d'équipe</strong> - 32H
+        <div *ngIf="management==true">
+          Travail en classe en présentiel pour apprendre à gérer une équipe de développeurs et à mettre en place des méthodes de travail.
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('NoSql')">
+        <strong>NoSQL</strong> - 32H
+        <div *ngIf="NoSql==true">
+          Travail en classe en présentiel pour apprendre à utiliser des bases de données NoSQL, notamment MongoDB, et à les intégrer dans des projets.
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('devWEB')">
+        <strong>Web avancé front</strong> - 48H
+        <div *ngIf="devWEB==true">
+          Travail en classe en présentiel pour apprendre à utiliser des frameworks front comme
+          <a href="/comp/angular-front" class="underline underline-offset-4">
+            <strong>Angular</strong>
+          </a>
+          et à réaliser des sites e-commerce ou des applications métiers.
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('free')">
+        <strong>Challenge 48H - FREE</strong>
+        <div *ngIf="free==true">
+          Travail entre toutes les filières dans un groupe de 10 personnes sur une durée de 48 heures afin de réaliser un projet commun autour du free gaming, avec, pour les développeurs, un service après-vente (SAV), un forum ainsi qu'une page vitrine de présentation des produits.
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('CoAdv')">
+        <strong>Challenge 48H - CoAdventure</strong>
+        <div *ngIf="CoAdv==true">
+          Travail entre toutes les filières dans un groupe de 10 personnes sur une durée de 48 heures afin de réaliser un projet commun portant sur la présentation d'un site de coaventure avec, pour les développeurs, un service de gestion des comptes utilisateurs et un service de gestion des annonces.
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('meduza')">
+        <strong>YDAYS (projet transverse annuel) - Meduza Production</strong> - 107h15
+        <div *ngIf="meduza==true">
+          Travail entre toutes les filières dans un groupe de 4 personnes sur l'année afin de réaliser un projet commun portant sur la création d'une entreprise cinématographique proposant la réalisation de clips ou de courts métrages, avant d'évoluer vers une entreprise de vente de services comme la création de sites web, de logos, l'aide au management ou l'optimisation.
+        </div>
+      </div>
+
+      <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('masterClass')">
+        <strong>Master class - enjeux climatiques et écologiques</strong> - 14H
+        <div *ngIf="masterClass==true">
+          Stage d'apprentissage avec des intervenants pour toute l'école sur les enjeux climatiques et écologiques de notre société et de notre métier.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="mb-10">
+  <h2 class="text-lg font-semibold mb-3 text-gray-400">
+    Actualité liée à cette compétence
+  </h2>
+
+  <!-- Loading -->
+  <p *ngIf="loading" class="text-gray-500 italic">Chargement des actualités…</p>
+
+  <!-- Actus -->
+  <div *ngFor="let item of news" class="bg-gray-800 rounded-lg p-4 mb-3">
+    <p class="font-semibold mb-1">
+      {{ item.title }}
+    </p>
+    <p class="text-sm text-gray-300 mb-2">
+      {{ item.description }}
+    </p>
+    <a
+      [href]="item.url"
+      target="_blank"
+      rel="noopener"
+      class="text-blue-400 underline text-sm"
+    >
+      Lire l’article sur {{ item.source }}
+    </a>
+  </div>
+
+  <!-- Fallback -->
+  <p *ngIf="!loading && news.length === 0" class="text-gray-500 italic">
+    Aucune actualité disponible pour le moment.
+  </p>
+</div>

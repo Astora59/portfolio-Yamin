@@ -1,0 +1,371 @@
+﻿<div
+  class="relative min-h-screen overflow-x-hidden bg-gradient-to-br from-gray-900 to-black text-white"
+>
+  <div
+    class="absolute left-10 top-20 h-72 w-72 rounded-full bg-blue-600/20 blur-3xl"
+  ></div>
+  <div
+    class="absolute bottom-20 right-10 h-96 w-96 rounded-full bg-purple-600/20 blur-[100px]"
+  ></div>
+
+  <section
+    class="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-4 pb-14 pt-28 text-center sm:px-6 sm:pb-16 sm:pt-32"
+  >
+    <div class="mb-8">
+      <div
+        class="mx-auto w-full max-w-[13rem] rounded-[2rem] border border-white/10 bg-white/5 p-2 shadow-2xl shadow-blue-950/40 sm:max-w-[15rem] md:max-w-[17rem] lg:max-w-[18rem]"
+      >
+        <img
+          [src]="profilePhotoUrl"
+          alt="Photo de profil de Yamin Moulay"
+          width="1378"
+          height="1496"
+          class="block h-auto w-full rounded-[1.5rem] bg-slate-950/70 object-cover object-center"
+        />
+      </div>
+    </div>
+
+    <h1
+      class="mb-4 max-w-4xl text-4xl font-bold leading-tight sm:text-5xl md:text-7xl"
+    >
+      Expert en ingénierie du logiciel
+    </h1>
+
+    <p
+      class="mb-8 max-w-3xl text-base leading-7 text-gray-300 sm:text-lg md:text-xl md:leading-8"
+    >
+      Je construis des
+      <strong>applications utiles, maintenables et pensées pour durer</strong>.
+      <br />
+      Vous pouvez découvrir ici ma
+      <a
+        routerLink="/about"
+        class="font-semibold text-blue-300 underline underline-offset-4 hover:text-blue-200"
+      >
+        présentation </a
+      >, mon
+      <a
+        routerLink="/parcours"
+        class="font-semibold text-cyan-300 underline underline-offset-4 hover:text-cyan-200"
+      >
+        parcours </a
+      >, mes
+      <a
+        routerLink="/comp"
+        class="font-semibold text-rose-300 underline underline-offset-4 hover:text-rose-200"
+      >
+        compétences
+      </a>
+      et mes
+      <a
+        routerLink="/real"
+        class="font-semibold text-indigo-300 underline underline-offset-4 hover:text-indigo-200"
+      >
+        réalisations </a
+      >.
+    </p>
+
+    <div
+      class="mb-8 flex w-full max-w-3xl flex-wrap justify-center gap-3 sm:gap-4"
+    >
+      <a
+        routerLink="/about"
+        class="w-full rounded-xl bg-blue-500 px-6 py-3 text-center text-white shadow transition hover:bg-blue-600 sm:w-auto"
+      >
+        Ma présentation
+      </a>
+      <a
+        routerLink="/parcours"
+        class="w-full rounded-xl bg-cyan-500 px-6 py-3 text-center font-semibold text-slate-950 shadow transition hover:bg-cyan-400 sm:w-auto"
+      >
+        Mon parcours
+      </a>
+
+      <a
+        routerLink="/comp"
+        class="w-full rounded-xl bg-rose-500 px-6 py-3 text-center text-white shadow transition hover:bg-rose-600 sm:w-auto"
+      >
+        Mes compétences
+      </a>
+
+      <a
+        routerLink="/real"
+        class="w-full rounded-xl bg-indigo-500 px-6 py-3 text-center text-white shadow transition hover:bg-indigo-600 sm:w-auto"
+      >
+        Mes réalisations
+      </a>
+
+      <button
+        (click)="contactModal.open()"
+        class="w-full rounded-xl border border-blue-500 px-6 py-3 text-center text-blue-400 transition hover:bg-blue-500/10 sm:w-auto"
+      >
+        Ouvrir le contact
+      </button>
+    </div>
+  </section>
+
+  <section class="relative z-10 bg-white/5 py-16 backdrop-blur-sm sm:py-20">
+    <div class="mx-auto max-w-6xl px-4 text-white sm:px-6">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div
+          class="rounded-3xl border border-white/10 bg-white/10 p-8 backdrop-blur"
+        >
+          <p class="mb-3 text-sm uppercase tracking-[0.28em] text-blue-300">
+            Présentation
+          </p>
+          <h2 class="mb-4 text-3xl font-bold">Qui je suis</h2>
+          <p class="mb-6 leading-8 text-gray-300">
+            Je suis actuellement en
+            <strong>master expert en Ingénierie du Logiciel</strong> à l’ISCOD.
+            Passionné par le développement d’applications, je maîtrise les
+            fondamentaux du <strong>back-end</strong>, du
+            <strong>front-end</strong> et de <strong>gestion de projet</strong>,
+            avec une appétence particulière pour
+            <a
+              routerLink="/comp/java-spring"
+              class="font-semibold text-emerald-300 underline underline-offset-4 hover:text-emerald-200"
+            >
+              Java / Spring Boot</a
+            >,
+            <a
+              routerLink="/comp/angular-front"
+              class="font-semibold text-blue-300 underline underline-offset-4 hover:text-blue-200"
+            >
+              Angular
+            </a>
+            et les approches
+            <a
+              routerLink="/comp/docker-devops"
+              class="font-semibold text-cyan-300 underline underline-offset-4 hover:text-cyan-200"
+            >
+              DevOps</a
+            >.
+          </p>
+          <a
+            routerLink="/about"
+            class="inline-flex rounded-full border border-blue-400/20 px-4 py-2 text-sm font-semibold text-blue-200 hover:bg-blue-500/10"
+          >
+            Lire ma présentation
+          </a>
+        </div>
+
+        <div
+          class="rounded-3xl border border-white/10 bg-white/10 p-8 backdrop-blur"
+        >
+          <p class="mb-3 text-sm uppercase tracking-[0.28em] text-cyan-300">
+            Navigation rapide
+          </p>
+          <h2 class="mb-6 text-3xl font-bold">
+            Tout retrouver en un coup d'œil
+          </h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <a
+              routerLink="/parcours"
+              class="rounded-2xl border border-cyan-400/20 bg-cyan-500/10 p-4 text-left transition hover:bg-cyan-500/15"
+            >
+              <p class="font-semibold text-cyan-200">Parcours</p>
+              <p class="mt-2 text-sm text-gray-300">
+                Découvrir mes <strong>5 grandes étapes</strong> de formation et
+                d’expérience.
+              </p>
+            </a>
+            <a
+              routerLink="/comp"
+              class="rounded-2xl border border-rose-400/20 bg-rose-500/10 p-4 text-left transition hover:bg-rose-500/15"
+            >
+              <p class="font-semibold text-rose-200">Compétences</p>
+              <p class="mt-2 text-sm text-gray-300">
+                Voir mes <strong>compétences techniques et humaines</strong> en
+                détail.
+              </p>
+            </a>
+            <a
+              routerLink="/real"
+              class="rounded-2xl border border-indigo-400/20 bg-indigo-500/10 p-4 text-left transition hover:bg-indigo-500/15"
+            >
+              <p class="font-semibold text-indigo-200">Réalisations</p>
+              <p class="mt-2 text-sm text-gray-300">
+                Explorer mes
+                <strong>projets, stages et réalisations concrètes</strong>.
+              </p>
+            </a>
+            <button
+              (click)="contactModal.open()"
+              class="rounded-2xl border border-blue-400/20 bg-blue-500/10 p-4 text-left transition hover:bg-blue-500/15"
+            >
+              <p class="font-semibold text-blue-200">Contact</p>
+              <p class="mt-2 text-sm text-gray-300">
+                Ouvrir le formulaire pour
+                <strong>me contacter directement</strong>.
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative z-10 py-16 sm:py-20">
+    <div class="mx-auto max-w-6xl px-4 text-white sm:px-6">
+      <div
+        class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+      >
+        <div>
+          <p class="mb-3 text-sm uppercase tracking-[0.28em] text-cyan-300">
+            Parcours
+          </p>
+          <h2 class="text-3xl font-bold md:text-4xl">Les étapes clés</h2>
+        </div>
+        <a
+          routerLink="/parcours"
+          class="font-medium text-cyan-300 hover:text-cyan-200"
+        >
+          Voir toute la frise ->
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
+        <a
+          *ngFor="let step of featuredSteps"
+          [routerLink]="['/parcours', step.slug]"
+          class="rounded-3xl border p-5 transition hover:-translate-y-1"
+          [ngStyle]="{
+            'border-color': step.accentSoft,
+            background:
+              'linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.72))',
+          }"
+        >
+          <p
+            class="mb-3 text-xs uppercase tracking-[0.24em]"
+            [style.color]="step.accent"
+          >
+            Étape {{ step.order }}
+          </p>
+          <h3 class="mb-2 text-lg font-semibold">{{ step.title }}</h3>
+          <p class="mb-4 text-sm text-gray-400">{{ step.subtitle }}</p>
+          <p class="text-sm leading-6 text-gray-300">{{ step.description }}</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative z-10 bg-white/5 py-16 backdrop-blur-sm sm:py-20">
+    <div class="mx-auto max-w-6xl px-4 text-white sm:px-6">
+      <div
+        class="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+      >
+        <div>
+          <p class="mb-3 text-sm uppercase tracking-[0.28em] text-indigo-300">
+            Réalisations
+          </p>
+          <h2 class="text-3xl font-bold md:text-4xl">Projets mis en avant</h2>
+        </div>
+        <a
+          routerLink="/real"
+          class="font-medium text-indigo-300 hover:text-indigo-200"
+        >
+          Voir toutes mes réalisations ->
+        </a>
+      </div>
+
+      <div class="relative">
+        <div class="mb-4 flex items-center justify-between gap-4">
+          <p class="text-sm text-gray-400">
+            Projet {{ currentProjectIndex + 1 }} / {{ featuredProjects.length }}
+          </p>
+          <div class="flex items-center gap-3">
+            <button
+              type="button"
+              (click)="showPreviousProject()"
+              class="flex h-12 w-12 items-center justify-center rounded-full border border-indigo-300/20 bg-slate-900/80 text-xl text-indigo-100 shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-indigo-300/40 hover:bg-indigo-500/10"
+              aria-label="Projet précédent"
+            >
+              &#8592;
+            </button>
+            <button
+              type="button"
+              (click)="showNextProject()"
+              class="flex h-12 w-12 items-center justify-center rounded-full border border-indigo-300/20 bg-slate-900/80 text-xl text-indigo-100 shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:border-indigo-300/40 hover:bg-indigo-500/10"
+              aria-label="Projet suivant"
+            >
+              &#8594;
+            </button>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-[2rem]">
+          <div
+            class="flex transition-transform duration-500 ease-out will-change-transform"
+            [style.transform]="projectTrackTransform"
+          >
+            <article
+              *ngFor="let project of featuredProjects"
+              class="w-full shrink-0 rounded-[2rem] border border-indigo-300/20 bg-white/10 p-6 shadow-2xl shadow-black/20 backdrop-blur sm:p-8"
+            >
+              <p
+                class="mb-3 text-xs uppercase tracking-[0.22em] text-indigo-300"
+              >
+                Projet mis en avant
+              </p>
+              <h3 class="mb-4 text-2xl font-semibold text-white sm:text-3xl">
+                {{ project.title }}
+              </h3>
+              <p
+                class="mb-8 max-w-3xl leading-8 text-gray-300"
+                [innerHTML]="highlightPortfolioText(project.shortDescription)"
+              ></p>
+
+              <div class="flex flex-wrap gap-3">
+                <a
+                  [routerLink]="['/real', project.slug]"
+                  class="rounded-full bg-indigo-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-400"
+                >
+                  Ouvrir la fiche
+                </a>
+                <a
+                  *ngIf="project.externalLink"
+                  [href]="project.externalLink.url"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="rounded-full border border-indigo-300/30 px-5 py-2.5 text-sm font-semibold text-indigo-200 transition hover:bg-indigo-500/10"
+                >
+                  {{ project.externalLink.label }}
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="mt-5 flex justify-center gap-2">
+          <button
+            *ngFor="let project of featuredProjects; let i = index"
+            type="button"
+            (click)="goToProject(i)"
+            class="h-2.5 rounded-full transition-all duration-300"
+            [ngClass]="
+              currentProjectIndex === i
+                ? 'w-10 bg-indigo-300'
+                : 'w-2.5 bg-white/25 hover:bg-white/40'
+            "
+            [attr.aria-label]="'Aller au projet ' + (i + 1)"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="relative z-10 bg-blue-600/20 py-16 text-center backdrop-blur sm:py-20"
+  >
+    <h2 class="mb-6 px-4 text-3xl font-bold sm:text-4xl">
+      Envie de travailler ensemble ?
+    </h2>
+    <button
+      (click)="contactModal.open()"
+      class="rounded-xl bg-blue-500 px-8 py-3 font-medium text-white shadow transition hover:bg-blue-700"
+    >
+      Me contacter
+    </button>
+  </section>
+</div>
+

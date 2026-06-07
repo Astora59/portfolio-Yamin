@@ -1,0 +1,64 @@
+<section
+  class="detail-page"
+  *ngIf="step as currentStep"
+  [ngStyle]="{
+    '--step-accent': currentStep.accent,
+    '--step-accent-soft': currentStep.accentSoft,
+    '--step-accent-glow': currentStep.accentGlow
+  }"
+>
+  <div class="detail-shell">
+    <a routerLink="/parcours" class="back-link">Retour au parcours</a>
+
+    <header class="detail-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Étape {{ currentStep.order }}</p>
+        <h1 [innerHTML]="currentStep.detailTitleHtml || currentStep.title"></h1>
+        <span class="step-category-badge">{{ currentStep.categoryLabel }}</span>
+        <p class="subtitle" [innerHTML]="highlightPortfolioText(currentStep.subtitle)"></p>
+        <p class="summary" [innerHTML]="highlightPortfolioText(currentStep.description)"></p>
+      </div>
+    </header>
+
+    <section class="detail-section">
+      <h2>Contexte</h2>
+      <p [innerHTML]="highlightPortfolioText(currentStep.article.context)"></p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Ce que j'y ai fait</h2>
+      <p [innerHTML]="highlightPortfolioText(currentStep.article.workDone)"></p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Ce que j'y ai découvert</h2>
+      <p [innerHTML]="highlightPortfolioText(currentStep.article.discoveries)"></p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Ce que j'en retiens</h2>
+      <p [innerHTML]="highlightPortfolioText(currentStep.article.takeaway)"></p>
+    </section>
+
+    <section
+      *ngIf="currentStep.relatedRealisations?.length"
+      class="detail-section related-section"
+    >
+      <h2>Réalisation associée</h2>
+
+      <ul class="related-list">
+        <li
+          *ngFor="let realisation of currentStep.relatedRealisations"
+          class="related-link-chip"
+        >
+          <a
+            [routerLink]="['/real', realisation.link]"
+            class="related-link"
+          >
+            {{ realisation.label }}
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</section>

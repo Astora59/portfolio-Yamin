@@ -1,0 +1,241 @@
+<nav
+  class="fixed top-0 z-50 w-full border-b border-white/20 bg-white/10 shadow-lg backdrop-blur-md"
+>
+  <div
+    class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4"
+  >
+    <a routerLink="/" class="flex min-w-0 flex-1 items-center gap-3 text-white">
+      <img
+        [src]="profilePhotoUrl"
+        alt="Photo de Yamin Moulay"
+        class="h-11 w-11 shrink-0 rounded-full border-2 border-white/25 object-cover shadow-md shadow-black/20 sm:h-12 sm:w-12"
+      />
+
+      <span class="min-w-0">
+        <span class="block truncate text-lg font-bold tracking-wide sm:text-xl">
+          Yamin Moulay
+        </span>
+        <span class="hidden text-sm text-blue-300 md:block">
+          Expert en ingénierie du logiciel
+        </span>
+      </span>
+    </a>
+
+    <button
+      (click)="toggleMenu()"
+      class="inline-flex h-11 shrink-0 items-center rounded-full border border-white/15 px-4 text-sm font-semibold text-white transition hover:bg-white/10 focus:outline-none lg:hidden"
+      [attr.aria-expanded]="isOpen"
+      aria-label="Ouvrir ou fermer le menu"
+    >
+      {{ isOpen ? "Fermer" : "Menu" }}
+    </button>
+
+    <div
+      class="hidden items-center gap-8 text-lg font-medium text-white lg:flex"
+    >
+      <a
+        routerLink="/"
+        routerLinkActive="text-blue-400 underline underline-offset-4"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="transition hover:text-blue-300"
+      >
+        Accueil
+      </a>
+
+      <a
+        routerLink="/about"
+        routerLinkActive="text-blue-400 underline underline-offset-4"
+        class="transition"
+        [ngClass]="sectionTones.about"
+      >
+        Présentation
+      </a>
+
+      <div class="group relative">
+        <a
+          routerLink="/parcours"
+          routerLinkActive="text-blue-400 underline underline-offset-4"
+          class="transition"
+          [ngClass]="sectionTones.parcours"
+        >
+          Parcours
+        </a>
+
+        <div
+          class="invisible absolute left-0 z-50 mt-3 w-72 rounded-lg border border-white/10 bg-gray-900 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100"
+        >
+          <a
+            *ngFor="let step of parcoursSteps"
+            [routerLink]="['/parcours', step.slug]"
+            class="mb-1 block rounded-r-lg px-4 py-2 text-sm transition duration-200 last:mb-0 hover:translate-x-1 hover:brightness-110"
+            [ngStyle]="getParcoursMenuStyle(step)"
+          >
+            Étape {{ step.order }} - {{ step.title }}
+          </a>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a
+          routerLink="/comp"
+          routerLinkActive="text-blue-400 underline underline-offset-4"
+          class="transition"
+          [ngClass]="sectionTones.competences"
+        >
+          Compétences
+        </a>
+
+        <div
+          class="invisible absolute left-0 z-50 mt-3 w-64 rounded-lg border border-white/10 bg-gray-900 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100"
+        >
+          <a
+            *ngFor="let skill of skills"
+            [routerLink]="['/comp', skill.slug]"
+            class="mb-1 block rounded-r-lg px-4 py-2 text-sm transition duration-200 last:mb-0 hover:translate-x-1 hover:brightness-110"
+            [ngStyle]="getSkillMenuStyle(skill)"
+          >
+            {{ skill.icon }} {{ skill.name }}
+          </a>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <a
+          routerLink="/real"
+          routerLinkActive="text-blue-400 underline underline-offset-4"
+          class="transition"
+          [ngClass]="sectionTones.realisations"
+        >
+          Réalisations
+        </a>
+
+        <div
+          class="invisible absolute left-0 z-50 mt-3 w-80 rounded-lg border border-white/10 bg-gray-900 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100"
+        >
+          <a
+            *ngFor="let realisation of realisations"
+            [routerLink]="['/real', realisation.slug]"
+            class="mb-1 block rounded-r-lg px-4 py-2 text-sm transition duration-200 last:mb-0 hover:translate-x-1 hover:brightness-110"
+            [ngStyle]="getRealisationMenuStyle(realisation)"
+          >
+            {{ realisation.title }}
+          </a>
+        </div>
+      </div>
+
+      <a
+        routerLink="/contact"
+        routerLinkActive="text-blue-400 underline underline-offset-4"
+        class="transition"
+        [ngClass]="sectionTones.contact"
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+
+  <div *ngIf="isOpen" class="border-t border-white/10 lg:hidden">
+    <div class="mx-auto max-w-6xl px-4 pb-4 sm:px-6">
+      <div
+        class="max-h-[calc(100svh-5rem)] overflow-y-auto rounded-[2rem] border border-white/10 bg-slate-950/95 p-4 text-white shadow-2xl shadow-black/30"
+      >
+        <a
+          routerLink="/"
+          routerLinkActive="text-blue-400"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+          class="block rounded-2xl px-4 py-3 text-base font-semibold transition hover:bg-white/5"
+        >
+          Accueil
+        </a>
+
+        <a
+          routerLink="/about"
+          routerLinkActive="text-blue-400"
+          (click)="closeMenu()"
+          class="mt-2 block rounded-2xl px-4 py-3 text-base font-semibold transition hover:bg-white/5"
+          [ngClass]="sectionTones.about"
+        >
+          Présentation
+        </a>
+
+        <div class="mt-4 border-t border-white/10 pt-4">
+          <a
+            [routerLink]="['/parcours']"
+            (click)="closeMenu()"
+            class="block rounded-2xl px-4 py-3 text-base font-semibold transition"
+            [ngClass]="sectionTones.parcours"
+          >
+            Parcours
+          </a>
+          <div class="mt-2 space-y-1 px-2">
+            <a
+              *ngFor="let step of parcoursSteps"
+              [routerLink]="['/parcours', step.slug]"
+              (click)="closeMenu()"
+              class="block rounded-r-xl px-3 py-2 text-sm transition duration-200 hover:translate-x-1 hover:brightness-110"
+              [ngStyle]="getParcoursMenuStyle(step)"
+            >
+              Étape {{ step.order }} - {{ step.title }}
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-4 border-t border-white/10 pt-4">
+          <a
+            [routerLink]="['/real']"
+            (click)="closeMenu()"
+            class="block rounded-2xl px-4 py-3 text-base font-semibold transition"
+            [ngClass]="sectionTones.realisations"
+          >
+            Réalisations
+          </a>
+          <div class="mt-2 space-y-1 px-2">
+            <a
+              *ngFor="let realisation of realisations; let i = index"
+              [routerLink]="['/real', realisation.slug]"
+              (click)="closeMenu()"
+              class="block rounded-r-xl px-3 py-2 text-sm transition duration-200 hover:translate-x-1 hover:brightness-110"
+              [ngStyle]="getRealisationMenuStyle(realisation)"
+            >
+              {{ realisation.title }}
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-4 border-t border-white/10 pt-4">
+          <a
+            [routerLink]="['/comp']"
+            routerLinkActive="text-blue-400"
+            (click)="closeMenu()"
+            class="block rounded-2xl px-4 py-3 text-base font-semibold transition"
+            [ngClass]="sectionTones.competences"
+          >
+            Compétences
+          </a>
+          <div class="mt-2 space-y-1 px-2">
+            <a
+              *ngFor="let skill of skills"
+              [routerLink]="['/comp', skill.slug]"
+              (click)="closeMenu()"
+              class="block rounded-r-xl px-3 py-2 text-sm transition duration-200 hover:translate-x-1 hover:brightness-110"
+              [ngStyle]="getSkillMenuStyle(skill)"
+            >
+              {{ skill.icon }} {{ skill.name }}
+            </a>
+          </div>
+        </div>
+
+        <a
+          routerLink="/contact"
+          routerLinkActive="text-blue-400"
+          (click)="closeMenu()"
+          class="mt-4 block rounded-2xl border-t border-white/10 px-4 py-3 pt-6 text-base font-semibold transition hover:bg-white/5"
+          [ngClass]="sectionTones.contact"
+        >
+          Contact
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
