@@ -7,8 +7,8 @@
     "build": "nx build",
     "watch": "nx build --watch --configuration development",
     "test": "nx test",
-    "github-build": "nx build --configuration production --base-href 'https://<username>.github.io/<nom-du-repo>/'",
-    "github-deploy": "cp dist/acportfolio/index.html dist/acportfolio/404.html && npx gh-pages -d dist/acportfolio"
+    "github-build": "nx build --configuration production --base-href 'https://astora59.github.io/portfolio-Yamin/'",
+    "github-deploy": "nx build --configuration production --base-href 'https://astora59.github.io/portfolio-Yamin/' && cp dist/acportfolio/index.html dist/acportfolio/404.html && npx gh-pages -d dist/acportfolio"
   },
   "private": true,
   "dependencies": {
