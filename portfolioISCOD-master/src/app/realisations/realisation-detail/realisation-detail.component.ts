@@ -30,6 +30,11 @@ export class RealisationDetailComponent implements OnInit {
       accent: '#a78bfa',
       soft: 'rgba(167, 139, 250, 0.18)',
       glow: 'rgba(167, 139, 250, 0.14)',
+    },
+    'rbx': {
+      accent: '#a35210',
+      soft: 'rgba(167, 139, 250, 0.18)',
+      glow: 'rgba(167, 139, 250, 0.14)',
     }
   }
 

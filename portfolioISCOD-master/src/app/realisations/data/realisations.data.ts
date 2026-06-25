@@ -252,6 +252,74 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
       },
     ],
   },
+  {
+    title: `Réalisation d'un site web sur les talents du nord - RBX`,
+    slug: 'rbx',
+    shortDescription:
+      'Un site web qui permet de répertorier les artistes divers du nord de la France.',
+    externalLink: {
+      label: 'Découvrir le site',
+      url: 'https://github.com/Astora59/rbx_react',
+      spotlightTitle: "Site web codé en React",
+      spotlightDescription:
+        "Un site web qui met en avant les talents du Nord de la France, en particulier de la ville de Roubaix.",
+    },
+    article: {
+      presentation: `
+        Etant musicien et ayant cotoyé divers artistes de ma région, j'ai trouvé qu'il y a énormément de talents incroyables qui méritent d'avoir leur place
+      `,
+      objectives: `
+      <h3>Objectif principal</h3>
+      Beaucoup d'artistes de la région du Nord méritent une attention toute particulière, dans un contexte où on laisse plus s'exprimer l'intelligence artificielle générative que la voix des artistes. Je voulais donc faire une application qui mettrait en avant ces talents.
+
+      `,
+      steps: `
+      <h3>Organisation du travail</h3>
+      Le travail consistait en deux parties principales : la conception de la base de données et le développement du site web.
+      <h3>Chronologie de mon parcours sur le projet</h3><div class="real-timeline">
+        <article class="real-timeline-item">
+          <h4>Conception des maquettes</h4>
+          <p>J'ai commencé par la conception des maquettes du site, ce que j'aimerais afficher, et comment l'afficher. Pour ce faire,  j'ai utilisé Figma.</p>
+        </article>
+
+        <article class="real-timeline-item">
+          <h4>Répertorier les artistes que je voulais mettre en avant</h4>
+          <p>Après quelques recherches et des connaissances que j'avais déjà, j'ai créé une base des artistes que je voulais mettre en avant.</p>
+        </article>
+
+        <article class="real-timeline-item">
+          <h4>Définition de la structure de données avec MongoDB</h4>
+          <p>Afin de concevoir le backend, il m'aura fallu définir la structure de la base de données, et ça passe par se poser ces questions : quoi mettre en avant ? Pourquoi les mettre en avant ? Après une certaine introspection j'ai défini les données dans un fichier JSON.</p>
+          
+        </article>
+
+        <article class="real-timeline-item">
+          <h4>Conception du backend avec Node et Express</h4>
+          <p>Je me suis chargé de la programmation de la partie back-end, ainsi que de la connexion avec la base de données. J'ai utilisé Node et Express.</p>
+        </article>
+
+        <article class="real-timeline-item">
+          <h4>Programmation du front-end</h4>
+          <p>Après avoir défini les routes de mon API, j'ai commené la programmation du front-end. J'ai utilisé React.</p>
+        </article>
+      </div>
+      `,
+      results: `C'est un de mes premiers gros projets personnels et je suis assez fier du résultat. J'ai malheureusement dû arrêter le projet suite à énormément de changements personnels, mais je sais que ce projet a des bases solides que je voudrais poursuivre.`,
+      future: `je pense qu'il y a des possibilités de poursuite intéressantes avec, par exemple, la possibilité de mettre en place une base de données dynamique où chacun peut ajouter ses talents. J'aimerais me repencher sur ce projet dès que possible, et pourquoi pas en faire une version plus axée sur le metal !.`,
+    },
+    relatedSkills: [
+      {
+        label: 'React',
+        link: 'React',
+      }
+    ],
+    relatedParcours: [
+      {
+        label: 'openclassrooms',
+        link: 'openclassrooms',
+      },
+    ],
+  }
 ]
 
 

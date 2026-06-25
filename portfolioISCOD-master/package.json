@@ -6,7 +6,9 @@
     "start": "nx serve",
     "build": "nx build",
     "watch": "nx build --watch --configuration development",
-    "test": "nx test"
+    "test": "nx test",
+    "github-build": "nx build --configuration production --base-href 'https://<username>.github.io/<nom-du-repo>/'",
+    "github-deploy": "cp dist/acportfolio/index.html dist/acportfolio/404.html && npx gh-pages -d dist/acportfolio"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +40,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@types/jasmine": "~4.3.0",
     "autoprefixer": "^10.4.14",
+    "gh-pages": "^6.3.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
