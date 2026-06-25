@@ -395,7 +395,7 @@ function formatTextSegment(
         return match;
       }
 
-      return `<a href="/comp/${slug}" class="skill-inline-link">${match}</a>`;
+      return `<a routerLink="/comp/${slug}" class="skill-inline-link">${match}</a>`;
     });
   }
 

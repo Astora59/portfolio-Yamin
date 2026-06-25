@@ -31,13 +31,13 @@
       </div>
 
       <div class="rounded-lg bg-gradient-to-r from-transparent to-transparent hover:from-pink-500 hover:to-yellow-500" (click)="otherFalse('devOps')">
-        <a href="/comp/docker-devops" class="underline underline-offset-4">
+        <a routerLink="/comp/docker-devops" class="underline underline-offset-4">
           <strong>DevOps</strong>
         </a>
         - 40H
         <div *ngIf="devOps==true">
           Travail en classe en présentiel pour apprendre à utiliser
-          <a href="/comp/docker-devops" class="underline underline-offset-4">
+          <a routerLink="/comp/docker-devops" class="underline underline-offset-4">
             <strong>Docker</strong>
           </a>
           et <strong>Kubernetes</strong> afin de mettre en place un environnement de développement.
@@ -62,7 +62,7 @@
         <strong>Web avancé front</strong> - 48H
         <div *ngIf="devWEB==true">
           Travail en classe en présentiel pour apprendre à utiliser des frameworks front comme
-          <a href="/comp/angular-front" class="underline underline-offset-4">
+          <a routerLink="/comp/angular-front" class="underline underline-offset-4">
             <strong>Angular</strong>
           </a>
           et à réaliser des sites e-commerce ou des applications métiers.
