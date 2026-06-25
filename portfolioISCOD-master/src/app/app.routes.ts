@@ -11,7 +11,7 @@ import { ParcoursDetailComponent } from './parcours/parcours-detail/parcours-det
 import { ContactComponent } from './contact/contact.component'
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'portfolio-Yamin/', component: HomeComponent },
 
   { path: 'about', component: AboutComponent },
   { path: 'parcours', component: ParcoursComponent },
@@ -20,9 +20,9 @@ export const routes: Routes = [
   { path: 'formation', component: FormationComponent },
   { path: 'contact', component: ContactComponent },
 
-  { path: 'comp', component: CompetencesComponent },
-  { path: 'comp/:slug', component: CompetenceDetailComponent },
+  { path: 'portfolio-Yamin/comp', component: CompetencesComponent },
+  { path: 'portfolio-Yamin/comp/:slug', component: CompetenceDetailComponent },
 
-  { path: 'real/:slug', component: RealisationDetailComponent },
+  { path: 'portfolio-Yamin/real/:slug', component: RealisationDetailComponent },
 
 ]
