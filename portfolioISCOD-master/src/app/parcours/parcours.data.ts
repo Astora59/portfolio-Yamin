@@ -111,7 +111,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
       workDone:
         'En tant que chef de projet web, j’ai pu superviser plusieurs produits pour cigarettes électroniques. De sa création, à la communication, au travail en équipe ainsi que de la gestion du site web. J’ai aussi eu l’occasion d’apprendre les bases du développement web avec HTML, CSS, Javascript et PHP.',
       discoveries:
-        `Avec une telle expérience, j’ai découvert le travail en entreprise, commment travailer en groupe et la gestion de projet.`,
+        `Avec une telle expérience, j’ai découvert le travail en entreprise, comment travailler en groupe et la gestion de projet.`,
       takeaway:
         'Cette expérience m’a initié au monde du travail. Elle a renforcé ma capacité à m’adapter et à comprendre les enjeux d’un cadre de travail exigeant.',
     },
@@ -131,7 +131,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
     ...SCHOOL_TONE,
     article: {
       context:
-        `Après ma formation chez CEPRECO, j'ai sauté le pas et j'ai appris le développement web avec React.Je voulais me spécialiser dans le développement web, après m'être rendu compte à quel point j'aimais ça.`,
+        `Après ma formation chez CEPRECO, j'ai sauté le pas et j'ai appris le développement web avec React. Je voulais me spécialiser dans le développement web, après m'être rendu compte à quel point j'aimais ça.`,
       workDone:
         `En plus d'avoir pu renforcer mes acquis, j'ai pu apprendre un framework, React, qui a permis de mener mes projets avec de nouvelles fonctionnalités. J'ai aussi pu travailler sur le déploiement de plusieurs applications web, et maîtriser des compétences indispensables pour tout développeur web.`,
       discoveries:
@@ -166,7 +166,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
         Durant ma formation à ISCOD, dans le cadre du master Expert en Ingénierie du Logiciel, j’ai approfondi la gestion de projet, le développement full-stack (Angular, Java / Spring, TypeScript), les tests, le DevOps (Docker, CI/CD, Kubernetes), l’architecture logicielle, la sécurité, ainsi que les méthodes agiles et la communication en environnement professionnel.
         Durant mon alternance chez Vegacy, je suis intervenu en tant que développeur full-stack sur des applications liées à la gestion d'événements e-sportifs.`,
       workDone:
-        `Au sein de mon entreprise, mon premier rôle a été la refonte du site web. J'ai aussi eu l'occasion de travailler sur un nouveau framework de Python, qui s'appelle Ren'py. Ce framework permet de creer des jeux video en utilisant des scripts Python. C'était un projet très difficile mais surtout passionnant, qui m'a permis de concevoir le jeu de ses visuels à son histoire, en passant bien sûr par sa programmation.`,
+        `Au sein de mon entreprise, mon premier rôle a été la refonte du site web. J'ai aussi eu l'occasion de travailler sur un nouveau framework de Python, qui s'appelle Ren'Py. Ce framework permet de créer des jeux vidéo en utilisant des scripts Python. C'était un projet très difficile mais surtout passionnant, qui m'a permis de concevoir le jeu, de ses visuels à son histoire, en passant bien sûr par sa programmation.`,
       discoveries:
         `À l’école, j’y ai découvert une vision plus large de l’ingénierie du logiciel, avec des sujets comme l’architecture, le pilotage de projet, la relation client, la qualité et l’industrialisation du développement.
         En entreprise, j’ai pu travailler sur des projets plus concrets, au contact de profils très divers.`,
@@ -201,7 +201,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
 
         En entreprise, j’y ai découvert les rituels de travail qui structurent le quotidien d'une entreprise, de la compréhension métier et de la collaboration pour faire évoluer une application web existante. Dans le secteur bancaire, chaque erreur peut être critique et avoir des conséquences graves. C'est pourquoi j'ai appris l'importance de proposer un code de qualité, lisible, maintenable et cohérent.`,
       takeaway:
-        `Cette étape marque le moment où je me suis senti le plus épanoui dans mon travail de développeur web. J'ai énormément appris non seulement sur moi même mais aussi sur le travail en équipe, les relations professionnelles et la gestion de projet.`,
+        `Cette étape marque le moment où je me suis senti le plus épanoui dans mon travail de développeur web. J'ai énormément appris non seulement sur moi-même, mais aussi sur le travail en équipe, les relations professionnelles et la gestion de projet.`,
     },
   },
 ];

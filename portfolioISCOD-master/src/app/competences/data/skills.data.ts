@@ -500,7 +500,7 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
     type: 'technical',
     article: {
       definition: `
-      Python est un superbe langage informatique que j'ai pu apprendre par nécessité, dans le cadre de la création de visual novel. J'ai utilisé un framework qui a permis de m'aider dans la gestion des packages et streamliner la création des jeux.
+      Python est un superbe langage informatique que j'ai pu apprendre par nécessité, dans le cadre de la création de jeux utilisant le format visual novel. J'ai utilisé un framework qui m'a aidé à gérer les packages et à simplifier la création des jeux.
       `,
       proofs: [
         {
@@ -518,7 +518,7 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
 
       `,
       evolution: `
-      Le potentiel de Python reste à être travailler, et je sais que beaucoup de programmes sont possibles en python.
+      Le potentiel de Python reste à explorer, et je sais que de nombreux programmes sont possibles en Python.
       `,
       relatedProjects: [
         {

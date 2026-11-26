@@ -13,7 +13,7 @@ export const REALISATIONS: Realisation[] = [
       url: 'https://github.com/Astora59/MPMT',
       spotlightTitle: 'Étude de cas ISCOD - PMT',
       spotlightDescription:
-        'Pour plus de détails sur ce projet, vous pouvez consulter le repos git du projet.',
+        'Pour plus de détails sur ce projet, vous pouvez consulter le dépôt Git du projet.',
     },
     article: {
       presentation:
@@ -105,13 +105,13 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
     },
     article: {
       presentation: `
-        Quand j'ai commencé à apprendre Java, j'ai été fasciné en retrospect par Minecraft. Le jeu le plus populaire de l'histoire du jeu vidéo avait été codé en Java. Bien entendu, j'avais une vision principalement de développeur concernant Java, alors je me suis dit qu'il était intéressant de coder un jeu vidéo de A à Z en Java, en rejoignant une compétition de programmation de jeux vidéo. 
+        Quand j'ai commencé à apprendre Java, j'ai été fasciné rétrospectivement par Minecraft. Le jeu le plus populaire de l'histoire du jeu vidéo avait été codé en Java. Bien entendu, j'avais une vision principalement orientée développeur concernant Java. Je me suis donc dit qu'il était intéressant de coder un jeu vidéo de A à Z en Java en participant à une compétition de programmation de jeux vidéo.
       `,
       objectives: `
       <h3>Objectif principal</h3>
       Le but principal de ce projet a été d'explorer les mécaniques principales de Java en créant des éléments en utilisant des classes, et de tester JPanel, qui permet d'afficher des images en Java.
       <h3>Contexte </h3>
-      Fut une époque où l'horreur sur Internet était tout simplement omniprésente. Ce mouvement a été principalement poussé par les youtubeurs de l'époque, en particulier Pewdiepie et Markiplier. Ces derniers ont permis à de nombreuses personnes de découvrir les jeux d'horreur. On a pu voir à cette époque une explosion de ces jeux faits par des développeurs indépendants, parfois intriguants, parfois très ennuyants, mais toujours fait avec amour et passion. Pour mon premier jeu codé en Java, je m'étais dit qu'il était intéressant de faire écho à cette époque du jeu vidéo qui m'est nostalgique.
+      À une certaine époque, l'horreur sur Internet était tout simplement omniprésente. Ce mouvement a été principalement porté par les YouTubeurs de l'époque, en particulier PewDiePie et Markiplier. Ces créateurs ont permis à de nombreuses personnes de découvrir les jeux d'horreur. On a vu alors une explosion de jeux réalisés par des développeurs indépendants : parfois intriguants, parfois très ennuyants, mais toujours conçus avec amour et passion. Pour mon premier jeu codé en Java, j'ai trouvé intéressant de faire écho à cette époque du jeu vidéo qui m'est nostalgique.
 
       `,
       steps: `
@@ -125,7 +125,7 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
 
         <article class="real-timeline-item">
           <h4>Création et animation des sprites</h4>
-          <p>J'ai créé les sprites et les animer. J'ai créé une classe joueur et monstre, et est défini le comportement de chacun d'entre eux avec un écouteur d'événements qui affiche un sprite spécifique en fonction de la touche pressée.</p>
+          <p>J'ai créé les sprites et les ai animés. J'ai créé une classe joueur et une classe monstre, et j'ai défini le comportement de chacune avec un écouteur d'événements qui affiche un sprite spécifique en fonction de la touche pressée.</p>
         </article>
 
         <article class="real-timeline-item">
@@ -136,7 +136,7 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
 
         <article class="real-timeline-item">
           <h4>Placement des objets et du son</h4>
-          <p>Comme dans le jeu slenderman, il y a 8 oeufs à trouver à travers la carte. J'ai défini la musique du jeu, et l'effet sonore quand on récupère un objet.</p>
+          <p>Comme dans le jeu Slender, il y a 8 œufs à trouver sur la carte. J'ai défini la musique du jeu et l'effet sonore joué lorsqu'on récupère un objet.</p>
         </article>
 
         <article class="real-timeline-item">
@@ -145,7 +145,7 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
         </article>
       </div>
       `,
-      results: `Je suis personnellement super fier de ce projet, c'est un programme simple mais qui a eu des retours positifs, dans un langage dont je ne connaissais pas les specificités. Dans un sens, ça m'a permis de développer non seulement de meilleurs connaissances en Java, mais aussi en game design. Je comprends mieux les systèmes dans lequel s'inscrivent de simples jeux qui ont bercé mon enfance et je trouve ça génial. `,
+      results: `Je suis personnellement très fier de ce projet : c'est un programme simple, mais qui a reçu des retours positifs, réalisé dans un langage dont je ne connaissais pas toutes les spécificités. Dans un sens, cela m'a permis de développer non seulement de meilleures connaissances en Java, mais aussi en game design. Je comprends mieux les systèmes dans lesquels s'inscrivent les jeux simples qui ont bercé mon enfance, et je trouve cela passionnant. `,
       future: `Je me suis beaucoup amusé sur ce projet, et c'est une évidence que je recommencerai à coder des jeux vidéo pour challenger ma vision de la programmation au sens large..`,
     },
     relatedSkills: [
@@ -188,7 +188,7 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
     title: `Développement d'un jeu vidéo sur le cyberharcèlement - Cybergarde`,
     slug: 'cybergarde',
     shortDescription:
-      'Jeu vidéo réalisé en Python (avec le framework ren’py) lors de cours contre le cyberhacèlement.',
+      'Jeu vidéo réalisé en Python avec le framework Ren’Py lors d’ateliers contre le cyberharcèlement.',
     externalLink: {
       label: 'Découvrir le jeu',
       url: 'https://github.com/Astora59/Cybergarde-part-one',
@@ -231,7 +231,7 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
         </article>
 
         <article class="real-timeline-item">
-          <h4>Programmation de l'entiérète du jeu</h4>
+          <h4>Programmation de l'intégralité du jeu</h4>
           <p>Le plus important dans ce type de projet, c'est de programmer en gardant un point de vue macro de l'ensemble du projet. Un écart peut vite arriver scénaristiquement, et le joueur peut constater rapidement ces erreurs. De plus, il a fallu programmer les routes, qui gardent en mémoire différentes variables qui correspondent aux choix. Afin de rendre le projet dynamique, je me suis permis de programmer certains effets visuels pour améliorer l'immersion du jeu.</p>
         </article>
       </div>
@@ -266,7 +266,7 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
     },
     article: {
       presentation: `
-        Etant musicien et ayant cotoyé divers artistes de ma région, j'ai trouvé qu'il y a énormément de talents incroyables qui méritent d'avoir leur place
+        Étant musicien et ayant côtoyé divers artistes de ma région, j'ai constaté qu'il existe énormément de talents incroyables qui méritent d'avoir leur place.
       `,
       objectives: `
       <h3>Objectif principal</h3>
@@ -300,12 +300,12 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
 
         <article class="real-timeline-item">
           <h4>Programmation du front-end</h4>
-          <p>Après avoir défini les routes de mon API, j'ai commené la programmation du front-end. J'ai utilisé React.</p>
+          <p>Après avoir défini les routes de mon API, j'ai commencé la programmation du front-end. J'ai utilisé React.</p>
         </article>
       </div>
       `,
       results: `C'est un de mes premiers gros projets personnels et je suis assez fier du résultat. J'ai malheureusement dû arrêter le projet suite à énormément de changements personnels, mais je sais que ce projet a des bases solides que je voudrais poursuivre.`,
-      future: `je pense qu'il y a des possibilités de poursuite intéressantes avec, par exemple, la possibilité de mettre en place une base de données dynamique où chacun peut ajouter ses talents. J'aimerais me repencher sur ce projet dès que possible, et pourquoi pas en faire une version plus axée sur le metal !.`,
+      future: `Je pense qu'il existe des possibilités de poursuite intéressantes, notamment la mise en place d'une base de données dynamique où chacun pourrait ajouter ses talents. J'aimerais me replonger dans ce projet dès que possible, et pourquoi pas en faire une version plus axée sur le métal !`,
     },
     relatedSkills: [
       {
