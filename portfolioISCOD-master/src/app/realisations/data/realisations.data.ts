@@ -19,7 +19,7 @@ export const REALISATIONS: Realisation[] = [
       presentation:
         `Dans le cadre d’une étude de cas faite durant ma formation chez ISCOD, j’ai travaillé sur PMT (Project Management Tool), une plateforme collaborative de gestion de projet. Le projet avait pour but de concevoir une application capable d’aider une équipe à planifier ses projets et à suivre l’avancement des tâches.
 
-c’est une application que J’ai réalisée en TypeScript avec Angular pour la partie front-end et Java Spring Boot pour la partie back-end. Elle ne se limitait pas au développement fonctionnel de l’application, puisqu’elle intégrait aussi des enjeux de tests automatisés, de dockerisation et de pipeline CI/CD (Intégration continue / Déploiement continu).`,
+C’est une application que j’ai réalisée en TypeScript avec Angular pour la partie front-end et Java Spring Boot pour la partie back-end. Elle ne se limitait pas au développement fonctionnel de l’application, puisqu’elle intégrait aussi des enjeux de tests automatisés, de dockerisation et de pipeline CI/CD (Intégration continue / Déploiement continu).`,
       objectives:
         `<h3>Objectif principal</h3>L’objectif principal du projet était de créer une application permettant à une équipe de planifier, suivre et faire évoluer un projet de manière collaborative.
 
@@ -202,7 +202,7 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
       `,
       objectives: `
       <h3>Objectif principal</h3>
-      Le but principal a été de mettre les joueurs au coeur de scénario qui implique du cyberharcèlement. Ils devront ensuite faire les bons choix, afin d'obtenir la meilleure fin possible. Les jeux explorent les méthodes des cyberharceleurs, et les manières de désamorcer ces situations.
+      Le but principal a été de mettre les joueurs au cœur d’un scénario impliquant du cyberharcèlement. Ils devront ensuite faire les bons choix afin d'obtenir la meilleure fin possible. Les jeux explorent les méthodes des cyberharceleurs et les moyens de désamorcer ces situations.
 
       `,
       steps: `
@@ -236,7 +236,7 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
         </article>
       </div>
       `,
-      results: `Ce projet fut passionnant, autant d'un point de vue humain que technique. Ce travail m'a permis de mettre à rude épreuve mes compétences en communication, mon travail d'équipe et mon adaptabilité. Il aura fallu que je prenne le rôle de "chef de projet" afin de cadrer la conception du jeu, tout en restant ouvert aux suggestions de ma très jeune équipe. C'était aussi humainement enrichissant, puisque cela m'a permis de comprendre la jeunesse d'aujourd'hui, leurs aspirations et les épreuves qu'ils peuvent rencontrer dans un monde hyper connecté.`,
+      results: `Ce projet fut passionnant, autant d'un point de vue humain que technique. Ce travail m'a permis de mettre à rude épreuve mes compétences en communication, mon travail d'équipe et mon adaptabilité. J'ai dû prendre le rôle de "chef de projet" afin de cadrer la conception du jeu tout en restant ouvert aux suggestions de ma très jeune équipe. C'était aussi humainement enrichissant, puisque cela m'a permis de comprendre la jeunesse d'aujourd'hui, ses aspirations et les épreuves qu'elle peut rencontrer dans un monde hyperconnecté.`,
       future: `J'ai réfléchi à plusieurs nouvelles mécaniques à implémenter si je devais refaire un jeu vidéo de ce type, et je compte bien mettre Python au service de mes futurs projets.`,
     },
     relatedSkills: [
@@ -289,7 +289,7 @@ Avec des fonds, de la patience et une bonne équipe, il serait possible de faire
 
         <article class="real-timeline-item">
           <h4>Définition de la structure de données avec MongoDB</h4>
-          <p>Afin de concevoir le backend, il m'aura fallu définir la structure de la base de données, et ça passe par se poser ces questions : quoi mettre en avant ? Pourquoi les mettre en avant ? Après une certaine introspection j'ai défini les données dans un fichier JSON.</p>
+          <p>Afin de concevoir le back-end, il m'a fallu définir la structure de la base de données. Cela passe par des questions telles que : quoi mettre en avant ? Pourquoi les mettre en avant ? Après une certaine introspection, j'ai défini les données dans un fichier JSON.</p>
           
         </article>
 

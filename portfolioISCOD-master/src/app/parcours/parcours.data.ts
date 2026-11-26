@@ -109,7 +109,7 @@ export const PARCOURS_STEPS: ParcoursStep[] = [
       context:
         `Suite à mes études en université, j'ai intégré une formation de chef de projet web et stratégie digitale, qui m'a permis de me familiariser avec l'environnement informatique en entreprise.`,
       workDone:
-        'En tant que chef de projet web, j’ai pu superviser plusieurs produits pour cigarettes électroniques. De sa création, à la communication, au travail en équipe ainsi que de la gestion du site web. J’ai aussi eu l’occasion d’apprendre les bases du développement web avec HTML, CSS, Javascript et PHP.',
+        'En tant que chef de projet web, j’ai pu superviser plusieurs produits pour cigarettes électroniques. J’ai participé à leur création, à la communication, au travail en équipe ainsi qu’à la gestion du site web. J’ai aussi eu l’occasion d’apprendre les bases du développement web avec HTML, CSS, JavaScript et PHP.',
       discoveries:
         `Avec une telle expérience, j’ai découvert le travail en entreprise, comment travailler en groupe et la gestion de projet.`,
       takeaway:

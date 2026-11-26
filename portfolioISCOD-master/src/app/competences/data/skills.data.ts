@@ -31,7 +31,7 @@ export const SKILLS: Skill[] = [
           description:
             `Dans le cadre d’une étude de cas faite durant ma formation chez ISCOD, j’ai travaillé sur PMT (Project Management Tool), une plateforme collaborative de gestion de projet. Le projet avait pour but de concevoir une application capable d’aider une équipe à planifier ses projets et à suivre l’avancement des tâches.
 
-c’est une application que J’ai réalisée en TypeScript avec Angular pour la partie front-end et Java Spring Boot pour la partie back-end. Elle ne se limitait pas au développement fonctionnel de l’application, puisqu’elle intégrait aussi des enjeux de tests automatisés, de dockerisation et de pipeline CI/CD (Intégration continue / Déploiement continu).`,
+C’est une application que j’ai réalisée en TypeScript avec Angular pour la partie front-end et Java Spring Boot pour la partie back-end. Elle ne se limitait pas au développement fonctionnel de l’application, puisqu’elle intégrait aussi des enjeux de tests automatisés, de dockerisation et de pipeline CI/CD (Intégration continue / Déploiement continu).`,
           result:
             `Ce projet est fonctionnel et m’a permis de réaliser un outil testé, maintenable et facilement déployable.
         
@@ -158,7 +158,7 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
     },
   },
   {
-    name: 'Tests (Jest, Karama & Jasmine, JUnit, H2)',
+    name: 'Tests (Jest, Karma & Jasmine, JUnit, H2)',
     slug: 'tests',
     summary:
       "Outils et méthodes de qualité pour vérifier automatiquement qu'une application fonctionne comme prévu.",
@@ -509,7 +509,7 @@ En termes de DevOps on peut parler des pipelines CI/CD qui permettent d’automa
             Dans le cadre d'une mission avec le collège Louise Michel de Lille, j'ai pu proposer des ateliers autour du cyberharcèlement, comment le reconnaître, les formes qu'il peut prendre, les actions qu'il faut adopter mais aussi les biais qui permettent à ces formes de violence de continuer.
           `,
           result:
-            `Le projet fut passionnant, autant d'un point de vue humain que technique. Ce travail m'a permis de mettre à rude épreuve mes compétences en communication, mon travail d'équipe et mon adaptabilité. Il aura fallu que je prenne le rôle de "chef de projet" afin de cadrer la conception du jeu, tout en restant ouvert aux suggestions de ma très jeune équipe. C'était aussi humainement enrichissant, puisque cela m'a permis de comprendre la jeunesse d'aujourd'hui, leurs aspirations et les épreuves qu'ils peuvent rencontrer dans un monde hyper connecté.`,
+            `Le projet fut passionnant, autant d'un point de vue humain que technique. Ce travail m'a permis de mettre à rude épreuve mes compétences en communication, mon travail d'équipe et mon adaptabilité. J'ai dû prendre le rôle de "chef de projet" afin de cadrer la conception du jeu tout en restant ouvert aux suggestions de ma très jeune équipe. C'était aussi humainement enrichissant, puisque cela m'a permis de comprendre la jeunesse d'aujourd'hui, ses aspirations et les épreuves qu'elle peut rencontrer dans un monde hyperconnecté.`,
           link: '/real/cybergarde',
         }
       ],
